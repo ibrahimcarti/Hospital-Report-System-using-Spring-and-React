@@ -28,18 +28,27 @@ Spring, JPA, Maven, React teknolojilerini kullanarak hazırlanmış bir laboratu
 ## Projenin Düzgün Çalışması için Gerekenler
 
 [ [Java JDK 17] ] - en az kurulu olması gerekmektedir.
+
 [ [MYSQL] ] - kurulması gerekmektedir.
+
 [ [Node.js] ] - kurulması gerekmektedir.
+
 [ [Apache Maven] ] - kurulu olması gerekmektedir
 
 ## Proje Kurulumu
 
 Proje kurulumu için gerekli adımları takip ediniz.
+
 Projeyi indirip istediğiniz bir yere yerleştirin.
+
 Mysql Workbenchi açıp "Server" kısımından "Data Import" seçeneğini seçin.
+
 Açılan pencerede Import from Self-Contained seçeneğini seçip "C:\YourPath\ReportSystem\databasesample" içindeki database tablosunu seçin.
+
 "Default Target Schema" kısmında New e basarak "hospitalreport" adlı bir tablo oluşturun ardından Start Import butonuna basarak databasemizi import etmiş olucaz.
-Databasemizin backend ile olan bağlantısını sağlayabilmemiz için "C:\YourPath\ReportSystem\backend\reportsystem\src\main\resources" diziinde bulunan "application.properties" dosyasını açıyoruz.
+
+Databasemizin backend ile olan bağlantısını sağlayabilmemiz için "C:\YourPath\ReportSystem\backend\reportsystem\src\main\resources" dizinide bulunan "application.properties" dosyasını açıyoruz.
+
 ```sh
 spring.jpa.hibernate.ddl-auto= update
 spring.datasource.url=jdbc:mysql://localhost:3306/hospitalreport
@@ -86,21 +95,31 @@ Gerekli paketlerin yüklenmesi bittikten sonra aşağıdaki komutu çalıştıra
 npm start
 ```
 ## Kullanıcı Adı ve Şifreler
-Yönetici Hesabı için
-1111111
-11111111111
-Daha Fazla Rapor Ekleyemeyen Bir Teknisyen için
-8456715
-35416857496
-Geri Kalan Teknisyenler
-7458416
-48567455612
 
-6578597
-34658228680
+### Yönetici Hesabı için
 
-6584157
-65458756945
+Kullanıcı Adı: 1111111
+
+Şifre: 11111111111
+
+### Daha Fazla Rapor Ekleyemeyen Bir Teknisyen için
+
+Kullanıcı Adı: 8456715
+
+Şifre: 35416857496
+
+### Geri Kalan Teknisyenler
+
+Kullanıcı Adı: 7458416   Şifre: 48567455612
+
+
+
+Kullanıcı Adı: 6578597   Şifre: 34658228680
+
+
+Kullanıcı Adı: 6584157   Şifre: 65458756945
+
+
 ## Proje Gereksinimleri
 - Rapor Tanımı ( Dosya numarası, Hasta Ad ve Soyad, Hasta Kimlik Numarası(TC), Koyulan Tanı Başlığı, Tanı Detayları, Raporun - Verildiği Tarih, Fiziksel Rapora Ait .png/.jpg Formatında Bir Adet Fotoğraf ) +
 - Bir rapor yalnızca bir laborant tarafından tanımlanmış olmalı. Bir laborant ise 5 tane rapor tanımlayabilir. ( Ad, Soyad, Hastane Kimlik Numarası(7 Haneli), ) +
